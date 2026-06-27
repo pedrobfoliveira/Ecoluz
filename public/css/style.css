@@ -578,11 +578,11 @@ a {
 
 @media (max-width: 600px) {
   .floating-logo {
-    width: 260px;
+    width: 220px;
   }
 
   .logo-space {
-    height: 240px;
+    height: 200px;
   }
 
   .welcome-text {

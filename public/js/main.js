@@ -72,10 +72,11 @@ function controlarLogoNoScroll() {
 
   const progresso = Math.min(scrollAtual / 420, 1);
 
-  const larguraInicial = 340;
+  // Tamanho inicial varia conforme a largura da tela
+  const larguraInicial = window.innerWidth <= 600 ? 220 : 340;
   const larguraFinal = 80;
 
-  const topoInicial = 140;
+  const topoInicial = window.innerWidth <= 600 ? 115 : 140;
   const topoFinal = 13;
 
   const novaLargura =
