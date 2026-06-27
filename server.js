@@ -22,6 +22,11 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-app.listen(PORT, () => {
-  console.log(`EcoLuz rodando em http://localhost:${PORT}`);
-});
+// Roda o servidor localmente. No Vercel, o app é exportado abaixo e o listen não é chamado.
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`EcoLuz rodando em http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
