@@ -5,7 +5,7 @@
 > Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento Full Stack — SENAI CIMATEC.
 > Alinhado aos ODS 7 (energia limpa e acessível), 11 (cidades e comunidades sustentáveis) e 13 (ação contra a mudança do clima).
 
-**Acesse:** [link_do_vercel]
+**Acesse:** (https://ecoluz-drab.vercel.app/)
 
 ---
 
