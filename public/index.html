@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>EcoLuz</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- Cabeçalho fixo -->
+  <header class="header">
+    <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <button class="login-button" id="loginButton">
+      Entrar/Cadastrar
+    </button>
+  </header>
+
+  <!-- Logo principal que começa grande e diminui ao rolar a página -->
+  <img
+    src="./assets/logo-ecoluz.png"
+    alt="Logo EcoLuz"
+    class="floating-logo"
+    id="floatingLogo"
+  />
+
+  <!-- Menu lateral das três barrinhas -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-menu" id="closeMenu" aria-label="Fechar menu">
+      ×
+    </button>
+
+    <a href="#inicio">Início</a>
+    <a href="./perfil.html">Perfil</a>
+
+    <button class="protected-link" data-page="dados-consumo">
+      Dados de consumo
+    </button>
+
+    <button class="protected-link" data-page="formulario">
+      Formulário
+    </button>
+
+    <p class="menu-warning">
+      Dados de consumo e formulário só podem ser acessados após login.
+    </p>
+  </nav>
+
+  <!-- Fundo escuro leve quando o menu abre -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <main>
+    <!-- Primeira tela -->
+    <section class="hero-section" id="inicio">
+      <p class="welcome-text">
+        Seja <strong>bem-vindo</strong> ao
+      </p>
+
+      <!-- Espaço visual reservado para a logo -->
+      <div class="logo-space"></div>
+
+      <!-- O texto será preenchido pelo JavaScript com efeito de digitação -->
+      <p class="slogan" id="typedSlogan"></p>
+
+      <!-- Seta compacta com dois chevrons para baixo -->
+        <a href="#oque" class="down-arrow" aria-label="Ir para próxima seção">
+            <img src="./assets/seta-baixo.png" alt="Seta para baixo" />
+        </a>
+    </section>
+
+    <!-- Seção: O que é? -->
+    <section class="info-section" id="oque">
+      <div class="info-content scroll-reveal">
+        <div class="info-text">
+          <h2>O que é?</h2>
+          <div class="title-line"></div>
+
+          <p>
+            O EcoLuz é uma plataforma criada para ajudar famílias a entenderem
+            melhor o consumo de energia em suas casas. Por meio de um
+            questionário simples e do cadastro das contas de luz, o sistema
+            identifica possíveis sinais de vulnerabilidade energética e alerta
+            quando há aumento anormal no consumo.
+          </p>
+
+          <p>
+            Com o EcoLuz, o usuário pode acompanhar seus gastos, visualizar
+            gráficos, receber recomendações personalizadas e tomar decisões
+            mais conscientes para economizar energia. A proposta é usar a
+            tecnologia para promover consumo responsável, reduzir desperdícios
+            e contribuir para uma energia mais justa e acessível.
+          </p>
+        </div>
+
+        <img
+          src="./assets/imagem-o-que-e.png"
+          alt="Imagem ilustrativa sobre energia"
+          class="section-image"
+        />
+      </div>
+    </section>
+
+    <!-- Linha cinza curta entre as duas seções -->
+    <div class="soft-separator"></div>
+
+    <!-- Seção: Como funciona? -->
+    <section class="info-section" id="como-funciona">
+      <div class="info-content scroll-reveal">
+        <div class="info-text">
+          <h2>Como funciona?</h2>
+          <div class="title-line"></div>
+
+          <div class="steps">
+            <p>
+              <strong>1. Preencha o perfil familiar</strong><br />
+              Informe dados simples sobre sua casa, renda, equipamentos e hábitos de consumo.
+            </p>
+
+            <p>
+              <strong>2. Cadastre suas contas de luz</strong><br />
+              Adicione o valor e o consumo mensal em <strong>Formulário</strong> para acompanhar seu histórico.
+            </p>
+
+            <p>
+              <strong>3. Receba seu diagnóstico</strong><br />
+              O sistema calcula seu nível de risco energético, exibe em <strong>Dados de Consumo</strong> e identifica possíveis problemas.
+            </p>
+
+            <p>
+              <strong>4. Acompanhe alertas e recomendações</strong><br />
+              Veja gráficos, avisos de consumo anormal e dicas para economizar energia.
+            </p>
+          </div>
+        </div>
+
+        <img
+          src="./assets/imagem-como-funciona.png"
+          alt="Imagem ilustrativa de checklist"
+          class="section-image checklist-image"
+        />
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>EcoLuz</p>
+    <p>Tecnologia para consumo consciente e energia justa.</p>
+
+    <p>
+      Projeto acadêmico alinhado aos ODS 7, 11 e 13, com foco em energia
+      acessível, cidades sustentáveis e ação contra a mudança climática.
+    </p>
+
+    <p>© 2026 EcoLuz.</p>
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

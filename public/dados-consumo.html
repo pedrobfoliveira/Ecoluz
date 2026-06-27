@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dados de Consumo | EcoLuz</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dados-consumo.css" />
+</head>
+
+<body>
+  <!-- Cabeçalho com logo centralizada -->
+  <header class="header" id="mainHeader">
+    <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a href="./index.html">
+      <img
+        src="./assets/logo-ecoluz.png"
+        alt="EcoLuz"
+        class="header-logo-centro"
+      />
+    </a>
+
+    <button class="login-button login-button--perfil" id="loginButton">
+      Perfil
+    </button>
+  </header>
+
+  <!-- Menu lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-menu" id="closeMenu" aria-label="Fechar menu">
+      ×
+    </button>
+
+    <a href="./index.html">Início</a>
+    <a href="./perfil.html">Perfil</a>
+    <a href="./dados-consumo.html">Dados de consumo</a>
+    <a href="./formulario.html">Formulário</a>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <main class="dados-main">
+
+    <!-- Saudação: sempre visível -->
+    <div class="saudacao">
+      <p class="saudacao-texto">Bem vindo,</p>
+      <h1 class="nome-usuario" id="nomeUsuario"></h1>
+    </div>
+
+    <!-- Alertas: mostrados se houver contas em atraso ou consumo elevado -->
+    <div id="alertasSection" class="alertas-section" style="display: none;"></div>
+
+    <!-- Estado: nenhuma conta cadastrada -->
+    <div class="estado-vazio" id="estadoVazio" style="display: none;">
+      <p>Nenhum dado energético foi fornecido.</p>
+      <a href="./formulario.html" class="btn-acao">Cadastrar conta de luz</a>
+    </div>
+
+    <!-- Estado: tem dados -->
+    <div class="dados-grid" id="dadosGrid" style="display: none;">
+
+      <!-- Coluna 1: Resumo -->
+      <div class="dados-col">
+        <h3 class="col-titulo">Resumo:</h3>
+        <div id="resumoCard" class="resumo-card"></div>
+      </div>
+
+      <!-- Coluna 2: Diagnóstico -->
+      <div class="dados-col">
+        <h3 class="col-titulo">Seu diagnóstico energético:</h3>
+        <div id="diagnostico"></div>
+      </div>
+
+      <!-- Coluna 3: Gráfico -->
+      <div class="dados-col">
+        <h3 class="col-titulo">Consumo dos últimos meses:</h3>
+        <div id="grafico"></div>
+      </div>
+
+    </div>
+
+    <!-- Navegação para o formulário -->
+    <div class="pagina-nav" id="paginaNav" style="display: none;">
+      <a href="./formulario.html" class="btn-acao">
+        Cadastrar conta de luz →
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>EcoLuz</p>
+    <p>Tecnologia para consumo consciente e energia justa.</p>
+    <p>
+      Projeto acadêmico alinhado aos ODS 7, 11 e 13, com foco em energia
+      acessível, cidades sustentáveis e ação contra a mudança climática.
+    </p>
+    <p>© 2026 EcoLuz.</p>
+  </footer>
+
+  <script type="module" src="./js/dados-consumo.js"></script>
+</body>
+</html>

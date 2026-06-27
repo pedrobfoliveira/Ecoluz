@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Login | EcoLuz</title>
+
+  <link rel="stylesheet" href="./css/auth.css" />
+</head>
+
+<body>
+  <main class="auth-page login-page">
+    <section class="login-card">
+      <h1>
+        Faça seu<br />
+        <span>Login</span>
+      </h1>
+
+      <form id="loginForm" class="auth-form">
+        <label for="loginEmail">E-mail</label>
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="Digite seu e-mail"
+          required
+        />
+
+        <label for="loginPassword">Senha</label>
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Digite sua senha"
+          required
+        />
+
+        <p class="auth-message" id="loginMessage"></p>
+
+        <button type="submit" class="auth-button">
+          Fazer login
+        </button>
+
+        <p class="auth-link-text">
+          Ainda não tem conta?<br />
+          <a href="./cadastro.html">Cadastre-se</a>
+        </p>
+      </form>
+    </section>
+
+    <section class="login-logo-area">
+      <a href="./index.html">
+        <img
+          src="./assets/logo-ecoluz.png"
+          alt="Logo EcoLuz"
+          class="login-logo"
+        />
+      </a>
+    </section>
+  </main>
+
+  <script type="module" src="./js/auth.js"></script>
+</body>
+</html>

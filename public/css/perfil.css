@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Poppins:wght@600;700;800;900&display=swap");
+
+.perfil-main {
+  min-height: 100vh;
+  padding: 145px 20px 70px;
+  background: radial-gradient(
+    ellipse at center,
+    #ffffff 0%,
+    #fffde8 45%,
+    #ffffc8 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.perfil-card {
+  width: 100%;
+  max-width: 510px;
+  background-color: var(--branco);
+  padding: 52px 58px 44px;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.14);
+}
+
+/* Avatar com inicial do usuário */
+
+.perfil-avatar {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background-color: var(--amarelo);
+  color: var(--branco);
+  font-family: "Poppins", sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+}
+
+.perfil-titulo {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.perfil-linha {
+  width: 160px;
+  height: 3px;
+  background-color: var(--amarelo);
+  margin: 0 auto 28px;
+}
+
+/* Abas */
+
+.perfil-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--cinza-claro);
+  margin-bottom: 28px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  background: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab-btn.active {
+  color: var(--preto);
+  border-bottom-color: var(--amarelo);
+}
+
+.tab-conteudo {
+  display: none;
+}
+
+.tab-conteudo.active {
+  display: block;
+}
+
+/* Formulários */
+
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil-form label {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 7px;
+}
+
+.perfil-form input,
+.perfil-form select {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  background-color: var(--cinza-claro);
+  padding: 0 16px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+.perfil-form input {
+  font-style: italic;
+}
+
+.perfil-form input::placeholder {
+  color: #777;
+}
+
+.perfil-form input:focus,
+.perfil-form select:focus {
+  box-shadow: 0 0 0 3px rgba(212, 168, 0, 0.22);
+}
+
+.perfil-form input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.perfil-form select {
+  cursor: pointer;
+}
+
+/* Contadores de equipamentos */
+
+.equipamentos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.equip-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background-color: var(--cinza-claro);
+  border-radius: 12px;
+}
+
+.equip-nome {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.equip-contador {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.equip-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--amarelo);
+  color: var(--branco);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.equip-btn:hover {
+  filter: brightness(0.88);
+}
+
+.equip-qtd {
+  font-size: 16px;
+  font-weight: 800;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Mensagem de feedback */
+
+.perfil-mensagem {
+  min-height: 20px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.perfil-mensagem.error {
+  color: #b00020;
+}
+
+.perfil-mensagem.success {
+  color: #1b7f3a;
+}
+
+/* Botão salvar */
+
+.perfil-salvar-btn {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  background-color: var(--amarelo);
+  color: var(--branco);
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.perfil-salvar-btn:hover {
+  filter: brightness(0.95);
+}
+
+.perfil-salvar-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Botão de logout */
+
+.perfil-logout-btn {
+  width: 100%;
+  height: 48px;
+  border: 2px solid #d0d0d0;
+  border-radius: 14px;
+  background-color: transparent;
+  color: #666;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.perfil-logout-btn:hover {
+  border-color: #b00020;
+  color: #b00020;
+}
+
+/* Remove a margem superior do rodapé global nesta página */
+.footer {
+  margin-top: 0;
+}
+
+/* Responsivo */
+
+@media (max-width: 600px) {
+  .perfil-main {
+    padding: 125px 16px 60px;
+  }
+
+  .perfil-card {
+    padding: 44px 26px 36px;
+  }
+
+  .perfil-titulo {
+    font-size: 32px;
+  }
+
+  .perfil-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+  }
+
+  .tab-btn {
+    font-size: 13px;
+  }
+}

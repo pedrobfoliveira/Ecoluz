@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Perfil | EcoLuz</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/perfil.css" />
+</head>
+
+<body>
+  <!-- Cabeçalho fixo -->
+  <header class="header">
+    <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <button class="login-button login-button--perfil" id="loginButton">
+      Perfil
+    </button>
+  </header>
+
+  <!-- Menu lateral -->
+  <nav class="side-menu" id="sideMenu">
+    <button class="close-menu" id="closeMenu" aria-label="Fechar menu">
+      ×
+    </button>
+
+    <a href="./index.html">Início</a>
+    <a href="./perfil.html">Perfil</a>
+    <a href="./dados-consumo.html">Dados de consumo</a>
+    <a href="./formulario.html">Formulário</a>
+  </nav>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <main class="perfil-main">
+    <div class="perfil-card">
+
+      <!-- Topo: sempre visível -->
+      <div class="perfil-avatar" id="perfilAvatar"></div>
+      <h1 class="perfil-titulo">Meu Perfil</h1>
+      <div class="perfil-linha"></div>
+
+      <!-- Navegação por abas -->
+      <div class="perfil-tabs">
+        <button class="tab-btn active" data-tab="usuario">
+          Perfil do usuário
+        </button>
+        <button class="tab-btn" data-tab="familiar">
+          Perfil familiar
+        </button>
+      </div>
+
+      <!-- Aba: Perfil do usuário -->
+      <div class="tab-conteudo active" id="tab-usuario">
+        <form id="perfilForm" class="perfil-form">
+          <label for="perfilUsername">Nome de usuário</label>
+          <input
+            type="text"
+            id="perfilUsername"
+            placeholder="Nome de usuário"
+            required
+          />
+
+          <label for="perfilEmail">E-mail</label>
+          <input
+            type="email"
+            id="perfilEmail"
+            placeholder="E-mail"
+            disabled
+          />
+
+          <p class="perfil-mensagem" id="perfilMensagem"></p>
+
+          <button type="submit" class="perfil-salvar-btn">
+            Salvar alterações
+          </button>
+        </form>
+      </div>
+
+      <!-- Aba: Perfil familiar -->
+      <div class="tab-conteudo" id="tab-familiar">
+        <form id="perfilFamiliarForm" class="perfil-form">
+
+          <label for="moradores">Número de moradores</label>
+          <select id="moradores">
+            <option value="">Selecione...</option>
+            <option value="1">1 morador</option>
+            <option value="2">2 moradores</option>
+            <option value="3">3 moradores</option>
+            <option value="4">4 moradores</option>
+            <option value="5">5 ou mais moradores</option>
+          </select>
+
+          <label for="renda">Renda familiar mensal</label>
+          <select id="renda">
+            <option value="">Selecione...</option>
+            <option value="ate_1000">Até R$ 1.000</option>
+            <option value="1001_2000">R$ 1.001 a R$ 2.000</option>
+            <option value="2001_3000">R$ 2.001 a R$ 3.000</option>
+            <option value="3001_5000">R$ 3.001 a R$ 5.000</option>
+            <option value="acima_5000">Acima de R$ 5.000</option>
+          </select>
+
+          <label for="tipoResidencia">Tipo de residência</label>
+          <select id="tipoResidencia">
+            <option value="">Selecione...</option>
+            <option value="casa_propria">Casa própria</option>
+            <option value="casa_alugada">Casa alugada</option>
+            <option value="apto_proprio">Apartamento próprio</option>
+            <option value="apto_alugado">Apartamento alugado</option>
+          </select>
+
+          <label>Equipamentos na residência</label>
+          <div class="equipamentos-lista">
+            <div class="equip-item">
+              <span class="equip-nome">Geladeira</span>
+              <div class="equip-contador">
+                <button type="button" class="equip-btn" data-action="menos" data-equip="geladeira">−</button>
+                <span class="equip-qtd" data-equip="geladeira">0</span>
+                <button type="button" class="equip-btn" data-action="mais" data-equip="geladeira">+</button>
+              </div>
+            </div>
+            <div class="equip-item">
+              <span class="equip-nome">Ar-condicionado</span>
+              <div class="equip-contador">
+                <button type="button" class="equip-btn" data-action="menos" data-equip="ar_condicionado">−</button>
+                <span class="equip-qtd" data-equip="ar_condicionado">0</span>
+                <button type="button" class="equip-btn" data-action="mais" data-equip="ar_condicionado">+</button>
+              </div>
+            </div>
+            <div class="equip-item">
+              <span class="equip-nome">Chuveiro elétrico</span>
+              <div class="equip-contador">
+                <button type="button" class="equip-btn" data-action="menos" data-equip="chuveiro_eletrico">−</button>
+                <span class="equip-qtd" data-equip="chuveiro_eletrico">0</span>
+                <button type="button" class="equip-btn" data-action="mais" data-equip="chuveiro_eletrico">+</button>
+              </div>
+            </div>
+            <div class="equip-item">
+              <span class="equip-nome">Máquina de lavar</span>
+              <div class="equip-contador">
+                <button type="button" class="equip-btn" data-action="menos" data-equip="maquina_lavar">−</button>
+                <span class="equip-qtd" data-equip="maquina_lavar">0</span>
+                <button type="button" class="equip-btn" data-action="mais" data-equip="maquina_lavar">+</button>
+              </div>
+            </div>
+            <div class="equip-item">
+              <span class="equip-nome">Televisão</span>
+              <div class="equip-contador">
+                <button type="button" class="equip-btn" data-action="menos" data-equip="televisao">−</button>
+                <span class="equip-qtd" data-equip="televisao">0</span>
+                <button type="button" class="equip-btn" data-action="mais" data-equip="televisao">+</button>
+              </div>
+            </div>
+            <div class="equip-item">
+              <span class="equip-nome">Computador/Notebook</span>
+              <div class="equip-contador">
+                <button type="button" class="equip-btn" data-action="menos" data-equip="computador">−</button>
+                <span class="equip-qtd" data-equip="computador">0</span>
+                <button type="button" class="equip-btn" data-action="mais" data-equip="computador">+</button>
+              </div>
+            </div>
+            <div class="equip-item">
+              <span class="equip-nome">Ferro elétrico</span>
+              <div class="equip-contador">
+                <button type="button" class="equip-btn" data-action="menos" data-equip="ferro_eletrico">−</button>
+                <span class="equip-qtd" data-equip="ferro_eletrico">0</span>
+                <button type="button" class="equip-btn" data-action="mais" data-equip="ferro_eletrico">+</button>
+              </div>
+            </div>
+            <div class="equip-item">
+              <span class="equip-nome">Micro-ondas</span>
+              <div class="equip-contador">
+                <button type="button" class="equip-btn" data-action="menos" data-equip="micro_ondas">−</button>
+                <span class="equip-qtd" data-equip="micro_ondas">0</span>
+                <button type="button" class="equip-btn" data-action="mais" data-equip="micro_ondas">+</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="perfil-mensagem" id="perfilMensagemFamiliar"></p>
+
+          <button type="submit" class="perfil-salvar-btn">
+            Salvar perfil familiar
+          </button>
+        </form>
+      </div>
+
+      <!-- Logout: sempre visível -->
+      <button class="perfil-logout-btn" id="logoutBtn">
+        Sair da conta
+      </button>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>EcoLuz</p>
+    <p>Tecnologia para consumo consciente e energia justa.</p>
+    <p>
+      Projeto acadêmico alinhado aos ODS 7, 11 e 13, com foco em energia
+      acessível, cidades sustentáveis e ação contra a mudança climática.
+    </p>
+    <p>© 2026 EcoLuz.</p>
+  </footer>
+
+  <script type="module" src="./js/perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cadastre-se | EcoLuz</title>
+
+  <link rel="stylesheet" href="./css/auth.css" />
+</head>
+
+<body>
+  <main class="auth-page register-page">
+    <section class="register-card">
+      <a href="./index.html">
+        <img
+          src="./assets/logo-ecoluz.png"
+          alt="Logo EcoLuz"
+          class="register-logo"
+        />
+      </a>
+
+      <h1>Cadastre-se</h1>
+
+      <form id="registerForm" class="auth-form">
+        <label for="registerUsername">Nome de usuário</label>
+        <input
+          type="text"
+          id="registerUsername"
+          placeholder="Digite seu nome de usuário"
+          required
+        />
+
+        <label for="registerEmail">E-mail</label>
+        <input
+          type="email"
+          id="registerEmail"
+          placeholder="Digite seu e-mail"
+          required
+        />
+
+        <label for="registerPassword">Senha</label>
+        <input
+          type="password"
+          id="registerPassword"
+          placeholder="Digite sua senha"
+          required
+          minlength="6"
+        />
+
+        <label for="registerConfirmPassword">Confirmação de senha</label>
+        <input
+          type="password"
+          id="registerConfirmPassword"
+          placeholder="Digite sua senha novamente"
+          required
+          minlength="6"
+        />
+
+        <p class="auth-message" id="registerMessage"></p>
+
+        <button type="submit" class="auth-button">
+          Cadastrar
+        </button>
+
+        <p class="auth-link-text">
+          Já tem conta?
+          <a href="./login.html">Faça login</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="./js/auth.js"></script>
+</body>
+</html>
