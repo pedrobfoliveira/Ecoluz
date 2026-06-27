@@ -577,6 +577,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  .hero-section {
+    min-height: 82vh;
+  }
+
   .floating-logo {
     width: 220px;
   }
