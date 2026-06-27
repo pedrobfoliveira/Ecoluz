@@ -199,6 +199,20 @@ body {
   color: #1b7f3a;
 }
 
+/* Botão voltar — aparece só no mobile quando a logo some */
+.back-link {
+  display: none;
+  color: var(--preto);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.back-link:hover {
+  opacity: 0.6;
+}
+
 /* =======================
    RESPONSIVO
 ======================= */
@@ -218,6 +232,10 @@ body {
 
   .login-logo-area {
     display: none;
+  }
+
+  .back-link {
+    display: inline-block;
   }
 }
 

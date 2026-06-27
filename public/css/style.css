@@ -594,6 +594,11 @@ a {
     padding: 0 16px;
   }
 
+  .login-button {
+    font-size: 13px;
+    padding: 7px 9px;
+  }
+
   .info-section {
     padding: 110px 6% 55px;
   }
@@ -604,5 +609,6 @@ a {
 
   .info-text p {
     font-size: 15px;
+    text-align: justify;
   }
 }
